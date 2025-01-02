@@ -22,3 +22,26 @@ function createBoard(){
     foodElement.classList.add("food");
     board.appendChild(foodElement);
 }
+
+
+function updateSnake(){
+    const newHead = {x:snake[0].x + direction.x, y:snake[0].y + direction.y};
+
+    if(newHead.x === food.x && newHead.y === food.y){
+        score++;
+        scoreElement.textContent = score;
+        snake.push({});
+        placeFood();
+    }else{
+        snake.pop();
+    }
+
+    snake.unshift(newHead);
+
+    if(isGameOver()){
+        alert(`Game Over! Your score : ${score}`);
+        resetGame();
+    }
+}
+
+
