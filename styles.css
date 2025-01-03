@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
@@ -31,18 +31,16 @@ body{
     background-color: #76c7c0;
     grid-column: span 1;
     grid-row: span 1;
-  }
+}
 
-  .food {
+.food {
     background-color: #e63946;
     grid-column: span 1;
     grid-row: span 1;
-  }
-   
+}
 
-  .info {
+
+.info {
     margin-top: 10px;
     font-size: 18px;
-  }
-  
-  
+}

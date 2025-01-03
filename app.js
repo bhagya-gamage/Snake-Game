@@ -51,3 +51,17 @@ function placeFood(){
     };
 }
 
+function isGameOver(){
+    const head = snake[0];
+    if(
+        head.x < 1 ||
+        head.x > 20 ||
+        head.y < 1 ||
+        head.y > 20 ||
+        snake.slice(1).some(segment => segment.x === head.x && segment.y === head.y)
+    ){
+        return true;
+    }
+
+    return false;
+}
