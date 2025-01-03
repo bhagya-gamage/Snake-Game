@@ -23,7 +23,6 @@ function createBoard(){
     board.appendChild(foodElement);
 }
 
-
 function updateSnake(){
     const newHead = {x:snake[0].x + direction.x, y:snake[0].y + direction.y};
 
@@ -95,3 +94,7 @@ function handleInput(event){
             break;
     }
 }
+
+document.addEventListener("keydown",handleInput);
+setInterval(gameLoop, 200);
+createBoard();
