@@ -65,3 +65,11 @@ function isGameOver(){
 
     return false;
 }
+
+function resetGame(){
+    snake = [{x:10, y:10}];
+    direction = {x:0, y:0};
+    score = 0;
+    scoreElement.textContent = score;
+    placeFood();
+}
