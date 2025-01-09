@@ -6,6 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-image: ;
     background-color: #282c34;
     color: white;
 }
@@ -20,7 +21,7 @@ body {
     position: relative;
     width: 400px;
     height: 400px;
-    background-color: #000;
+    background-color: #f6f03b;
     border: 5px solid #444;
     display: grid;
     grid-template-columns: repeat(20, 20px);
@@ -28,13 +29,13 @@ body {
 }
 
 .snake {
-    background-color: #76c7c0;
+    background-color: #000000;
     grid-column: span 1;
     grid-row: span 1;
 }
 
 .food {
-    background-color: #e63946;
+    background-color: #ff1414;
     grid-column: span 1;
     grid-row: span 1;
 }

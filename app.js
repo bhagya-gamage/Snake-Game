@@ -1,10 +1,12 @@
 const board = document.getElementById("game-board");
 const scoreElement = document.getElementById("score");
+const highScoreElement = document.getElementById("high-score");
 
 let snake = [{x:10, y:10}];
 let food = {x:15, y: 15};
 let direction = {x:0, y:0};
 let score = 0;
+let highScore = localStorage.getItem("highScore") || 0;
 
 function createBoard(){
     board.innerHTML='';
@@ -98,3 +100,15 @@ function handleInput(event){
 document.addEventListener("keydown",handleInput);
 setInterval(gameLoop, 200);
 createBoard();
+highScoreElement.textContent = highScore; 
+
+if(newHead.x === food.x && newHead.y === food.y){
+    score++;
+    scoreElement.textContent = score;
+
+    if(score > highScore){
+        highScore = score;
+        localStorage.setItem("highScore",highScore);
+        highScoreElement.textContent = highScore;
+    }
+}
